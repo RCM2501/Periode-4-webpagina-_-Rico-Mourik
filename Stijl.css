@@ -224,30 +224,20 @@ nav a:hover {
       height: 500px;
       display: inline-block;
       vertical-align: top;
-   }
-
-   #spotifyiframe,
-   #spotifyiframe2 {
-      margin-left: 2%;
-      margin-right: 2%;
+      margin: 0 2% 0 0;
+      box-sizing: border-box;
    }
 }
-
-/* Voor kleinere schermen wil ik de iframes schermvullend en onder elkaar */
 
 @media screen and (max-width: 699px) {
    .spotify-iframe {
       display: block;
       width: min(80%, calc(100vw - 2rem));
-      margin: 0.75rem;
+      max-width: 80%;
+      margin: 0.75rem auto;
       border-radius: 12px;
       box-sizing: border-box;
       height: 500px;
-   }
-
-   #spotifyiframe,
-   #spotifyiframe2 {
-      margin: 1rem auto;
    }
 }
 
