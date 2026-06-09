@@ -23,7 +23,7 @@
     if (!data) {
       document.getElementById('article-title').textContent = 'Artikel niet gevonden';
       document.getElementById('article-date').textContent = '';
-      document.getElementById('article-content').innerHTML = '<p>Het gevraagde artikel bestaat (nog) niet.</p>';
+      document.getElementById('article-content').textContent = 'Het gevraagde artikel bestaat (nog) niet.';
     } else {
     const articleImage = document.getElementById('article-image');
     document.getElementById('article-title').textContent = data.title;
