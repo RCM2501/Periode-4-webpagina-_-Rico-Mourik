@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nieuwsartikel</title>
+  <link rel="stylesheet" href="Stijl.css">
+</head>
+<body>
+  <main class="article-page">
+    <h1 id="article-title">Nieuwsartikel</h1>
+    <img id="article-image" class="article-image" alt="Nieuwsafbeelding">
+    <div class="datum" id="article-date">Datum</div>
+    <div class="content" id="article-content">
+    </div>
+  </main>
+
+  <script src="articles-data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id') || '1';
+    const data = (window.ARTICLES && window.ARTICLES[id]) ? window.ARTICLES[id] : null;
+    if (!data) {
+      document.getElementById('article-title').textContent = 'Artikel niet gevonden';
+      document.getElementById('article-date').textContent = '';
+      document.getElementById('article-content').innerHTML = '<p>Het gevraagde artikel bestaat (nog) niet.</p>';
+    } else {
+    const articleImage = document.getElementById('article-image');
+    document.getElementById('article-title').textContent = data.title;
+    document.getElementById('article-date').textContent = data.date;
+    if (articleImage) {
+      articleImage.src = data.image;
+      articleImage.alt = data.title;
+    }
+    document.getElementById('article-content').innerHTML = data.body.map(text => `<p>${text}</p>`).join('');
+    }
+  </script>
+</body>
+</html>
