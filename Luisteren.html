@@ -9,7 +9,7 @@
 </head>
 
 <body class="body2">
-  <section id="Luisteren">
+  <section>
     <div class="Hoofdtekst">
       <h1>Luisteren</h1>
       <h3>Ik heb hier wat muziek waar ik veel luister. </h3>
@@ -20,13 +20,15 @@
         zangers, een televisieprogramma.</p>
     </div>
   </section>
-  <iframe data-testid="embed-iframe" id="spotifyiframe" class="spotify-iframe"
-    src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO1c6rSg?utm_source=generator"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-  </iframe>
-  <iframe data-testid="embed-iframe" id="spotifyiframe2" class="spotify-iframe"
-    src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO3dZP6V?utm_source=generator"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-  </iframe>
+  <div class="spotify-row">
+    <iframe data-testid="embed-iframe" class="spotify-iframe"
+      src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO1c6rSg?utm_source=generator"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+    </iframe>
+    <iframe data-testid="embed-iframe" class="spotify-iframe"
+      src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO3dZP6V?utm_source=generator"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+    </iframe>
+  </div>
   <script src="script.js"></script>
 </body>

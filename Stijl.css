@@ -217,27 +217,26 @@ nav a:hover {
    margin-bottom: 15px;
 }
 
-@media screen and (min-width: 700px) {
-   .spotify-iframe {
-      border-radius: 12px;
-      width: 45%;
-      height: 500px;
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 2% 0 0;
-      box-sizing: border-box;
-   }
+.spotify-row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 1rem;
+}
+
+.spotify-iframe {
+   border-radius: 12px;
+   height: 500px;
+   box-sizing: border-box;
+   flex: 0 1 45%;
+   min-width: 280px;
 }
 
 @media screen and (max-width: 699px) {
    .spotify-iframe {
-      display: block;
-      width: min(80%, calc(100vw - 2rem));
-      max-width: 80%;
-      margin: 0.75rem auto;
-      border-radius: 12px;
-      box-sizing: border-box;
-      height: 500px;
+      flex: 0 1 80%;
+      width: 80%;
+      min-width: auto;
    }
 }
 
