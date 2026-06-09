@@ -27,26 +27,28 @@ nav {
    background: #333;
    padding: 1rem;
    text-align: center;
-   min-width: 500px;
-   width: 30%;
    margin: auto;
    text-decoration: none;
+   font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+   max-width: 70%;
 }
 
 nav a {
    color: #fff;
    margin: 0.2rem;
    text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.35rem;
+   white-space: nowrap;
    position: relative;
-   bottom: 5px;
+   bottom: 0;
 }
 
 nav a img {
    width: 25px;
    height: 25px;
-   position: relative;
-   top: 10px;
-   margin-right: 2px;
+   margin: 0;
 }
 
 nav a:hover {
