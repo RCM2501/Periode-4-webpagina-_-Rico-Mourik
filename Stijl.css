@@ -171,7 +171,7 @@ nav a:hover {
 .Hoofdtekst {
    text-align: center;
    color: #000000;
-   font-size: clamp(1.5rem, 3vw, 2.5rem);
+   font-size: clamp(1.5rem, 3vw, 2rem);
    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -209,7 +209,7 @@ nav a:hover {
 }
 
 .loginButton:hover {
-   opacity: 0.9;
+   opacity: 0.8;
 }
 
 #message {
@@ -217,22 +217,38 @@ nav a:hover {
    margin-bottom: 15px;
 }
 
-.spotify-iframe {
-   border-radius: 12px;
-   width: 45%;
-   height: 500px;
-   display: inline-block;
-   vertical-align: top;
+@media screen and (min-width: 700px) {
+   .spotify-iframe {
+      border-radius: 12px;
+      width: 45%;
+      height: 500px;
+      display: inline-block;
+      vertical-align: top;
+   }
+
+   #spotifyiframe,
+   #spotifyiframe2 {
+      margin-left: 2%;
+      margin-right: 2%;
+   }
 }
 
-#spotifyiframe {
-   margin-left: 2%;
-   margin-right: 2%;
-}
+/* Voor kleinere schermen wil ik de iframes schermvullend en onder elkaar */
 
-#spotifyiframe2 {
-   margin-left: 2%;
-   margin-right: 2%;
+@media screen and (max-width: 699px) {
+   .spotify-iframe {
+      display: block;
+      width: min(80%, calc(100vw - 2rem));
+      margin: 0.75rem;
+      border-radius: 12px;
+      box-sizing: border-box;
+      height: 500px;
+   }
+
+   #spotifyiframe,
+   #spotifyiframe2 {
+      margin: 1rem auto;
+   }
 }
 
 .inhoud-rij {
@@ -255,7 +271,7 @@ nav a:hover {
 }
 
 #hobby {
-  margin-top: 11rem;
+   margin-top: 11rem;
 }
 
 #vrijetijd {
